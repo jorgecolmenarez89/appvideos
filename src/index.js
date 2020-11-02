@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'react-owl-carousel2/lib/styles.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
+import rootReducer from './reducers';
+import { Provider } from 'react-redux';
+import { createStore, compose } from 'redux';
+import persistState from 'redux-localstorage';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const enhancer = compose(
+  persistState('favorites')
+)
+const store = createStore(rootReducer, {}, enhancer);
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>
+  , document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

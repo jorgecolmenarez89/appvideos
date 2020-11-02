@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+a{
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #181818;
+  color: #ffffff;
+  font-family:  'Helvetica Neue',Helvetica,Arial,sans-serif !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+.btn-red {
+  color: #fff;
+  background-color: #e50914;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#e50914),to(#db0510));
+  background-image: -webkit-linear-gradient(top,#e50914,#db0510);
+  background-image: -moz- oldlinear-gradient(top,#e50914,#db0510);
+  background-image: -o-linear-gradient(top,#e50914,#db0510);
+  background-image: linear-gradient(to bottom,#e50914,#db0510);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.45);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.45);
+  box-shadow: 0 1px 0 rgba(0,0,0,.45);
+}
+
+.btn-red.hover, .btn-red:focus, .btn-red:hover {
+  background: #f40612;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.45);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.45);
+  box-shadow: 0 1px 0 rgba(0,0,0,.45);
+  color: #eee;
+}
+
+.navbar-brand {
+  color: #e50914 !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: #ffffff !important;
+}
+
+.nav-item-right{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.no-nav{
+  margin-top: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pointer{
+  cursor: pointer;
 }
+
+.owl-theme .owl-nav {
+  margin-top: -190px !important;
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  right: 0;
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: transparent;
+  color: red;
+  text-decoration: none;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  color: red;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 5px;
+  padding: 2px 5px;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.owl-carousel.owl-drag .owl-item:first-child {
+  display: none;
+}
+
+
+
+
